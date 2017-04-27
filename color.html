@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head> 
+	<title>Color Game</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link href="https://fonts.googleapis.com/css?family=Arvo:400,700|Montserrat:400,400i,500,600,700" rel="stylesheet">
+</head>
+<body>
+	<div class="container">
+		<div class="title">
+			<a href="color.html"><h1>The Color Game.</h1></a> 
+		</div>
+		<div id="stripe">
+			<div class="infoSection">
+				<div id="message"></div>
+			</div>
+			<div class="infoSection">
+				<div class="infoTitle">Score</div>
+				<div id="score" class="number"></div>
+				<div id="scoreMessage">+10</div>
+			</div>
+			<div class="infoSection">
+				<div class="infoTitle">Time</div>
+				<div id="timer" class="number"></div>
+			</div>
+			<div class="infoSection">
+				<div class="infoTitle">Round</div>
+				<div id="round" class="number"></div>
+			</div>
+			<div class="infoSection">
+				<div class="infoTitle">Lives</div>
+				<div id="life" class="number"></div>
+			</div>
+		</div>
+		<div class="startContainer">
+			<button class="startButton">Start Game</button>
+		</div>
+		<div class="gameContainer">
+			<div id="questionContainer">
+				<div id="gameMessage">
+					What Color is this? 
+				</div>
+				<div class="square"></div>
+			</div>
+			<div id="answerContainer">
+				<div class="square">
+						<div class="squareMessage">
+							Wrong
+						</div>
+				</div>
+				<div class="square">
+						<div class="squareMessage">
+							Wrong
+						</div>
+				</div>
+				<div class="square">
+						<div class="squareMessage">
+							Wrong
+						</div>
+				</div>
+				<div class="square">
+						<div class="squareMessage">
+							Wrong
+						</div>
+				</div>
+			</div>
+		</div>
+		<div id="gameOverContainer">
+			<div id="gameOverMessage">
+				You Scored <span id="totalScore">0</span> points. 
+			</div>
+			<button class="playButton">Start Game</button>
+		</div>
+
+	</div>
+	
+	<script type="text/javascript" src="color.js"></script>
+	<script type='text/javascript' src='tinycolor.js'></script>
+	<script type='text/javascript'>
+	var color = tinycolor("red");
+	</script>
+</body>
+</html>

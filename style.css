@@ -1,0 +1,227 @@
+body {
+	background: #fff; 
+	font-family: "Montserrat", sans-serif;
+	-webkit-font-smoothing: antialiased;
+	font-size: 14px;
+	color: #282828; 
+}
+
+a {
+	text-decoration: none;
+}
+
+button {
+	font-size: 14px; 
+	color: #FFFFFF; 
+	padding: 15px 30px; 
+	border-radius: 40px; 
+	background: linear-gradient(135deg, #3A1C71, #D76D77);
+	text-transform: uppercase;
+	border: none; 
+	font-weight: 600; 
+	letter-spacing: .5px; 
+	cursor: pointer;
+	transition: transform .3s ease-out; 
+}
+
+button:hover {
+	transform: scale(1.05);
+}
+
+button:focus {
+	 outline: 0;
+}
+
+.startButton, .playButton {
+	margin: 30px auto;
+	text-align: center;
+}
+
+#questionContainer {
+	width: 50%; 
+	float: left;
+}
+
+#answerContainer {
+	float: left;
+	width: 50%; 
+}
+
+#answerContainer .square {
+	width: 40%;
+	background: purple; 
+	height: 150px; 
+	float: left; 
+	margin: 5%; 
+	background: black;
+	transition: transform .2s ease-out; 
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border-radius: 10px;
+	animation: enter .5s ease-out; 
+}
+
+@keyframes enter{
+	0% {
+		transform: scale(0.8);
+		opacity: 0; 
+	}
+	100% {
+		transform: scale(1);
+		opacity: 1; 
+	}
+}
+
+#answerContainer .square:hover {
+	transform: scale(1.05) !important;
+}
+
+
+#questionContainer .square {
+	width: 90%;
+	background: purple; 
+	padding-bottom: 90%; 
+	float: left; 
+	margin: 5%; 
+	background: black; 
+	border-radius: 10px; 
+	animation: enter .5s ease-out;
+}
+
+.container {
+	margin: 0 200px;
+	max-width: 1170px; 
+}
+
+h1 {
+	color: black;
+	font-family: "Arvo", serif;
+	font-weight: 700; 
+	font-size: 60px; 
+
+}
+
+#stripe {
+	background: white; 
+	height: 100px; 
+	text-align: center;
+	color: black; 
+	display: flex;
+	justify-content: center;
+}
+
+.selected {
+	background: pink; 
+}
+
+#message {
+	color: black; 
+}
+
+.title {
+	text-align: center;
+
+}
+
+.infoSection {
+	float: right; 
+	margin-right: 40px; 
+}
+
+.infoTitle {
+	text-transform: uppercase;
+	letter-spacing: .5px; 
+	color: #878787; 
+	font-size: 13px; 
+	font-weight: 500; 
+}
+
+.pointer{
+	cursor: pointer;
+}
+
+
+.squareMessage {
+	font-family: "Arvo";
+	font-size: 16px; 
+	text-align: center; 
+	animation: moveUpSquare 1s;  
+	animation-delay: 0s; 
+	opacity: 0; 
+	color: #000; 
+	display: none;
+}
+
+@keyframes moveUpSquare {
+	0%{
+		transform: translateY(10px);
+		opacity: 1; 
+	}
+	100%{
+		transform: translateY(-10px);
+		opacity: 0; 
+	}
+}
+
+.squareFade {
+	animation: fadeOut .5s forwards !important;
+}
+
+@keyframes fadeOut {
+	0%{
+		opacity: 1; 
+	}
+	100%{
+		opacity: 0; 
+	}
+}
+
+#scoreMessage {
+	font-size: 12px; 
+	color: red; 
+	z-index: 1; 
+	margin-top: -30px;
+	animation: moveUpScore 1s forwards; 
+	opacity: 0;
+	display: none;
+}
+
+@keyframes moveUpScore {
+	0%{
+		transform: translateY(5px);
+		opacity: 1; 
+	}
+	100%{
+		transform: translateY(-5px);
+		opacity: 0; 
+	}
+}
+
+#gameMessage {
+	font-size: 18px; 
+}
+
+.number {
+	margin-top: 8px; 
+	font-size: 24px; 
+	font-family: "Arvo", serif;
+
+}
+
+#gameOverContainer {
+	margin-top: 100px; 
+	display: flex; 
+	flex-direction: column;
+	justify-content: center;
+
+}
+
+#gameOverMessage{
+	font-size: 30px; 
+	text-align: center;
+}
+
+.startContainer {
+	display: flex;
+}
